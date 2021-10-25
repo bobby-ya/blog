@@ -34,9 +34,9 @@ app.get("/",(req,res)=>{
 
 // INDEX ROUTES
 app.get("/blogs",(req,res)=>{
-    Blog.find({},(err,blogs)=>{
-        if(err){
-            console.log(err)
+    Blog.find({},(error,blogs)=>{
+        if(error){
+            console.log(error)
         }
         else{
             res.render("index",{blogs:blogs})
